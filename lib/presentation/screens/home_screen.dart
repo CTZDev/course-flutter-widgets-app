@@ -44,7 +44,7 @@ class _CustomListTitle extends StatelessWidget {
       leading: Icon(menuItem.icon, color: appTheme.primary),
       trailing: Icon(Icons.arrow_forward_ios, color: appTheme.primary),
       onTap: () {
-        debugPrint(menuItem.link);
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
