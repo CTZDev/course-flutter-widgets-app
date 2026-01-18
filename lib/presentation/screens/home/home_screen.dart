@@ -5,6 +5,8 @@ import 'package:widget_app/config/menu/menu_item.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  static const String name = 'home';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +48,8 @@ class _CustomListTitle extends StatelessWidget {
       trailing: Icon(Icons.arrow_forward_ios, color: appTheme.primary),
       onTap: () {
         // Navigator.pushNamed(context, menuItem.link);
-        context.push(menuItem.link);
+        // context.push(menuItem.link);
+        context.pushNamed(menuItem.name);
       },
     );
   }

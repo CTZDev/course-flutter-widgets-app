@@ -6,11 +6,20 @@ final appRouter = GoRouter(
   initialLocation:
       '/', // Si queremos probar una pantalla en especifico, podemos colocarla aqui de forma temporal
   routes: [
-    GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
+    GoRoute(
+      path: '/',
+      name: 'home',
+      builder: (context, state) => const HomeScreen(),
+    ),
     GoRoute(
       path: '/buttons',
+      name: 'buttons',
       builder: (context, state) => const ButtonsScreen(),
     ),
-    GoRoute(path: '/cards', builder: (context, state) => const CardsScreen()),
+    GoRoute(
+      path: '/cards',
+      name: 'cards',
+      builder: (context, state) => const CardsScreen(),
+    ),
   ],
 );
